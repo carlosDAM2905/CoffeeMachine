@@ -29,11 +29,12 @@ public class CoffeeMachine4 {
 
         mostrarEstado(estado);
 
-        int exit = 0;
-        while (true) {
+        //int exit = 0;
+        String accion = "";
+        while (!accion.equalsIgnoreCase("exit")) {
 
             System.out.println("Escribe la acción a realizar (buy, fill, take)");
-            String accion = teclado.nextLine();
+            accion = teclado.nextLine();
 
 
             if (accion.equalsIgnoreCase("buy")){
