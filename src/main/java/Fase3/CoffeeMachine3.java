@@ -27,11 +27,7 @@ public class CoffeeMachine3 {
 
     }
 
-    // insertar cantidades:
 
-    public static void cantidades() {
-
-    }
 
 
     // calcular cuantos cafés pueden prepararse con los ingredientes que disponemos:
