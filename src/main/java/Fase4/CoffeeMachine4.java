@@ -77,21 +77,21 @@ public class CoffeeMachine4 {
                 efectivo = estado.get(4) + 4;
 
                 estado.set(0, agua);
-                estado.set(1, cafe);
+                estado.set(2, cafe);
                 estado.set(3, vasos);
                 estado.set(4, efectivo);
                 break;
 
             case 2:
                 agua = estado.get(0) - 350;
-                cafe = estado.get(1) - 20;
-                leche = estado.get(2) - 75;
+                cafe = estado.get(2) - 20;
+                leche = estado.get(1) - 75;
                 vasos = estado.get(3) - 1;
                 efectivo = estado.get(4) + 7;
 
                 estado.set(0, agua);
-                estado.set(1, cafe);
-                estado.set(2, leche);
+                estado.set(2, cafe);
+                estado.set(1, leche);
                 estado.set(3, vasos);
                 estado.set(4, efectivo);
                 break;
