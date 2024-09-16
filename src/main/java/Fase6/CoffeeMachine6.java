@@ -78,6 +78,7 @@ private static final int PRECIO_CAPPUCCINNO = 6;
                 case "Eligiendo tipo de café": { // EN CASO DE QUE EL ESTADO SEA "Eligiendo tipo de café", SE LLAMA AL MÉTODO buy(seleccion) QUE SE ENCARGA DE DESCONTAR LOS INGREDIENTES Y AUMENTAR EL EFECTIVO DEPENDIENDO DE LA SELECCIÓN QUE HAGAMOS DE CAFÉ (ESPRESO, LATTE, CAPPUCCINO). FINALMENTE, VOLVEMOS DE NUEVO AL ESTADO "Eligiendo una acción"
                     buy(seleccion);
                         estado = "Eligiendo una acción";
+                    System.out.println("Escribe la acción a realizar (buy, fill, take, remaining, exit)");
                     break;
 
                 } case "Rellenando agua": // SI HEMOS SELECCIONADO FILL, AUTOMATICAMENTE EL ESTADO CAMBIA A "Rellenando agua" Y VA INCREMENTANDO LA CANTIDAD A DEMANDA DE AGUA, LECHE, CAFE Y VASOS. AL NO PODER UTILIZAR EL SCANNER EN ESTA CLASE Y TENER QUE USAR OBLIGATORIAMENTE UN String, UTILIZAMOS Integer.parseInt PARA CAMBIAR EL TIPO DE DATO DE String A int Y PODER AUMENTAR LAS CANTIDADES QUE SON ATRIBUTOS DE TIPO int (AGUA, LECHE, CAFE, VASOS, EFECTIVO) HACEMOS LO MISMO CON TODOS LOS INGREDIENTES SIGUIENTES:
@@ -112,7 +113,6 @@ private static final int PRECIO_CAPPUCCINNO = 6;
         public void buy(String seleccion) { // MÉTODO PARA COMPRAR, COMPROBAR SI TENEMOS INGREDIENTES SUFICIENTES Y EN CASO CONTRARIO LANZAR UN MENSAJE DE FALTA DE INGREDIENTES EN LA MÁQUINA Y EN CASO DE ÉXITO APLICAR LA LÓGICA PARA DESCONTAR LOS INGREDIENTES QUE HEMOS GASTADO REALIZANDO EL CAFÉ
         if (seleccion.equalsIgnoreCase("back")) {
             estado = "Eligiendo una acción";
-            System.out.println("Escribe la acción a realizar (buy, fill, take, remaining, exit)");
             return;
         }
 
@@ -173,6 +173,7 @@ private static final int PRECIO_CAPPUCCINNO = 6;
                     this.cafe -= 12;
                     this.vasos -= 1;
                     this.efectivo += PRECIO_CAPPUCCINNO;
+
                 }
                 break;
             default:
