@@ -13,6 +13,7 @@ public class CoffeeMachine5 {
     static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args) {
 
+
         ArrayList<Integer> estado = new ArrayList<>();
         estado.add(400); //AGUA
         estado.add(540); //LECHE
@@ -32,6 +33,7 @@ public class CoffeeMachine5 {
 
             System.out.println("Escribe la acción a realizar (buy, fill, take, remaining, exit)");
             accion = teclado.nextLine();
+
 
 
             if (accion.equalsIgnoreCase("buy")){
